@@ -1,0 +1,26 @@
+// create  a DB
+// and Insert name in db
+db.khushal.insertOne({ Surname: "Sharma"})
+db.khushal.insertOne({ name : "delete me "})
+
+
+// to find all documents present in db
+db.khushal.find()
+db.khushal.insertOne({
+    name:"Vishal" ,  age: 19 , address : "indore" , hobbies : "swimming "
+})
+
+
+// To find specific detail of db
+db.khushal.find({ address : "indore"})
+
+
+// Update db
+db.khushal.updateOne({ age :19 }, {$set : {age :21 }})
+// Show updated age 
+db.khushal.findOne({ age : 21})
+
+
+// Delete documents
+db.khushal.deleteOne({ name :"delete me "})
+db.khushal.find()
